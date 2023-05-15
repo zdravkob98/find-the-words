@@ -14,35 +14,35 @@ const PreviewBoard = ({ tableData }) => {
       <TableContainer
         component={Paper}
         sx={
-          tableData.length === 2
+          tableData[0].length === 2
             ? {
                 width: "200px",
               }
-            : tableData.length === 3
+            : tableData[0].length === 3
             ? {
                 width: "300px",
               }
-            : tableData.length === 4
+            : tableData[0].length === 4
             ? {
                 width: "400px",
               }
-            : tableData.length === 5
+            : tableData[0].length === 5
             ? {
                 width: "500px",
               }
-            : tableData.length === 6
+            : tableData[0].length === 6
             ? {
                 width: "600px",
               }
-            : tableData.length === 7
+            : tableData[0].length === 7
             ? {
                 width: "700px",
               }
-            : tableData.length === 8
+            : tableData[0].length === 8
             ? {
                 width: "800px",
               }
-            : tableData.length === 9
+            : tableData[0].length === 9
             ? {
                 width: "900px",
               }
