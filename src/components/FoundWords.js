@@ -99,8 +99,6 @@ const FoundWords = ({ rows, columns, tableData }) => {
                   item
                   container
                   xs={12}
-                  justifyContent="center"
-                  alignItems="center"
                   display="flex"
                   flexDirection="column"
                 >
@@ -120,8 +118,6 @@ const FoundWords = ({ rows, columns, tableData }) => {
                   item
                   container
                   xs={12}
-                  justifyContent="center"
-                  alignItems="center"
                   display="flex"
                   flexDirection="column"
                 >
@@ -141,8 +137,6 @@ const FoundWords = ({ rows, columns, tableData }) => {
                   item
                   container
                   xs={12}
-                  justifyContent="center"
-                  alignItems="center"
                   display="flex"
                   flexDirection="column"
                 >
@@ -162,8 +156,6 @@ const FoundWords = ({ rows, columns, tableData }) => {
                   item
                   container
                   xs={12}
-                  justifyContent="center"
-                  alignItems="center"
                   display="flex"
                   flexDirection="column"
                 >
@@ -183,8 +175,6 @@ const FoundWords = ({ rows, columns, tableData }) => {
                   item
                   container
                   xs={12}
-                  justifyContent="center"
-                  alignItems="center"
                   display="flex"
                   flexDirection="column"
                 >
@@ -204,8 +194,6 @@ const FoundWords = ({ rows, columns, tableData }) => {
                   item
                   container
                   xs={12}
-                  justifyContent="center"
-                  alignItems="center"
                   display="flex"
                   flexDirection="column"
                 >
@@ -225,8 +213,6 @@ const FoundWords = ({ rows, columns, tableData }) => {
                   item
                   container
                   xs={12}
-                  justifyContent="center"
-                  alignItems="center"
                   display="flex"
                   flexDirection="column"
                 >
@@ -246,8 +232,6 @@ const FoundWords = ({ rows, columns, tableData }) => {
                   item
                   container
                   xs={12}
-                  justifyContent="center"
-                  alignItems="center"
                   display="flex"
                   flexDirection="column"
                 >
@@ -267,8 +251,6 @@ const FoundWords = ({ rows, columns, tableData }) => {
                   item
                   container
                   xs={12}
-                  justifyContent="center"
-                  alignItems="center"
                   display="flex"
                   flexDirection="column"
                 >
@@ -288,8 +270,6 @@ const FoundWords = ({ rows, columns, tableData }) => {
                   item
                   container
                   xs={12}
-                  justifyContent="center"
-                  alignItems="center"
                   display="flex"
                   flexDirection="column"
                 >

@@ -7,51 +7,18 @@ import {
   Paper,
   Grid,
 } from "@mui/material";
+import { getTableWidth } from "../utils/tableWidth";
 
 const PreviewBoard = ({ tableData }) => {
   return (
     <Grid container justifyContent="center" marginTop={10}>
       <TableContainer
         component={Paper}
-        sx={
-          tableData[0].length === 2
-            ? {
-                width: "200px",
-              }
-            : tableData[0].length === 3
-            ? {
-                width: "300px",
-              }
-            : tableData[0].length === 4
-            ? {
-                width: "400px",
-              }
-            : tableData[0].length === 5
-            ? {
-                width: "500px",
-              }
-            : tableData[0].length === 6
-            ? {
-                width: "600px",
-              }
-            : tableData[0].length === 7
-            ? {
-                width: "700px",
-              }
-            : tableData[0].length === 8
-            ? {
-                width: "800px",
-              }
-            : tableData[0].length === 9
-            ? {
-                width: "900px",
-              }
-            : {
-                width: "1000px",
-              }
-        }
+        sx={{
+          width: getTableWidth(tableData),
+        }}
       >
-        <Table sx={{ border: "1px solid black" }}>
+        <Table className="table">
           <TableBody>
             {tableData.map((row, rowIndex) => (
               <TableRow key={rowIndex}>

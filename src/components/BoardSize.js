@@ -35,6 +35,7 @@ const Board = ({
         </Grid>
         <Grid item>
           <TextField
+            className="textfield-hover"
             label="Rows"
             variant="outlined"
             value={rows}
@@ -47,6 +48,7 @@ const Board = ({
         </Grid>
         <Grid item>
           <TextField
+            className="textfield-hover"
             label="Columns"
             variant="outlined"
             value={columns}
@@ -59,10 +61,10 @@ const Board = ({
         </Grid>
         <Grid item container xs={12} justifyContent="center">
           <Button
+            className="orange-button"
             disabled={rows === 0 || columns === 0}
             type="submit"
             variant="contained"
-            color="primary"
           >
             Submit
           </Button>

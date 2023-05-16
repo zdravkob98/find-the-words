@@ -10,6 +10,8 @@ import {
   TableRow,
 } from "@mui/material";
 import { alphabetArray } from "../components/AlphabetArray";
+import "../App.css";
+import { getTableWidth } from "../utils/tableWidth";
 
 const EmptyBoard = ({
   tableData,
@@ -67,10 +69,11 @@ const EmptyBoard = ({
             }}
           >
             <TextField
+              className="textfield-hover"
               label="Letter"
               id={cellId}
               onChange={(e) => handleCellChange(e, i, j)}
-              inputProps={{ min: 1, maxLength: 1 }}
+              inputProps={{ min: 1, maxLength: 1, autoComplete: "off" }}
               size="small" // Set the size to 'small' for a compact appearance
             />
           </TableCell>
@@ -82,7 +85,7 @@ const EmptyBoard = ({
 
     return tableRows;
   };
-  console.log(tableData);
+
   return (
     <>
       <Grid container marginTop={10} justifyContent="center">
@@ -100,54 +103,20 @@ const EmptyBoard = ({
         </Grid>
         <TableContainer
           component={Paper}
-          sx={
-            tableData[0].length === 2
-              ? {
-                  width: "200px",
-                }
-              : tableData[0].length === 3
-              ? {
-                  width: "300px",
-                }
-              : tableData[0].length === 4
-              ? {
-                  width: "400px",
-                }
-              : tableData[0].length === 5
-              ? {
-                  width: "500px",
-                }
-              : tableData[0].length === 6
-              ? {
-                  width: "600px",
-                }
-              : tableData[0].length === 7
-              ? {
-                  width: "700px",
-                }
-              : tableData[0].length === 8
-              ? {
-                  width: "800px",
-                }
-              : tableData[0].length === 9
-              ? {
-                  width: "900px",
-                }
-              : {
-                  width: "1000px",
-                }
-          }
+          sx={{
+            width: getTableWidth(tableData),
+          }}
         >
-          <Table sx={{ border: "1px solid black" }}>
+          <Table className="table">
             <TableBody>{generateTable(rows, columns)}</TableBody>
           </Table>
         </TableContainer>
         <Grid item container xs={12} justifyContent="center" marginTop={5}>
           <Button
+            className="orange-button"
             disabled={!checkObject(tableData)}
             type="submit"
             variant="contained"
-            color="primary"
             onClick={() => generatePreviewTable(tableData)}
           >
             Submit
