@@ -1,10 +1,22 @@
-.table {
-  border: 1px solid black;
-  background-color: #C4D3DA;
+:root {
+  --color-background: #C4D3DA;
+  --color-accent: #f06823;
 }
 
+/* Headers */
+.header {
+  background-color: var(--color-background);
+}
+
+/* Tables */
+.table {
+  border: 1px solid black;
+  background-color: var(--color-background);
+}
+
+/* Buttons */
 .orange-button {
-  background-color: #f06823 !important;
+  background-color: var(--color-accent) !important;
   color: white !important;
 }
 
@@ -13,12 +25,13 @@
   color: #ccc !important;
 }
 
+/* TextField */
 .textfield-hover .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-  border-color: #f06823 !important;
+  border-color: var(--color-accent) !important;
   outline: none;
   box-shadow: none;
 }
 
 .textfield-hover .MuiInputLabel-root.Mui-focused {
-  color: #f06823 !important;
+  color: var(--color-accent) !important;
 }
