@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <>
       <Grid container justifyContent="center">
-        <h1>Words</h1>
+        <h1>Find The Words</h1>
       </Grid>
       <Grid>
         <Divider variant="middle" />
