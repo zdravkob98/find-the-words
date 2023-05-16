@@ -3,29 +3,22 @@ import { words } from "../components/Words";
 
 const FoundWords = ({ rows, columns, tableData }) => {
   const dfs = (table, visited, row, col, word, currentWord, found) => {
-    // Base case: if the word is empty, it means we found a match
     if (word === "") {
       found.add(currentWord);
       return;
     }
 
-    // Check if the current cell is within the bounds of the table
     if (row >= 0 && row < table.length && col >= 0 && col < table[row].length) {
-      // Check if the current cell is not visited and matches the first character of the word
       if (!visited[row][col] && table[row][col] === word[0]) {
-        // Mark the current cell as visited
         visited[row][col] = true;
 
-        // Concatenate the current character to the currentWord
         const newWord = currentWord + table[row][col];
 
-        // Recursively search in all four directions
         dfs(table, visited, row - 1, col, word.slice(1), newWord, found); // Up
         dfs(table, visited, row + 1, col, word.slice(1), newWord, found); // Down
         dfs(table, visited, row, col - 1, word.slice(1), newWord, found); // Left
         dfs(table, visited, row, col + 1, word.slice(1), newWord, found); // Right
 
-        // Mark the current cell as unvisited (backtracking)
         visited[row][col] = false;
       }
     }
@@ -47,8 +40,8 @@ const FoundWords = ({ rows, columns, tableData }) => {
         }
       }
     }
-    const endTime = performance.now(); // Stop measuring time
-    const timeTaken = endTime - startTime; // Calculate time taken in milliseconds
+    const endTime = performance.now();
+    const timeTaken = endTime - startTime;
 
     const foundWordsArray = [...foundWords];
     const words3 = foundWordsArray

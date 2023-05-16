@@ -1,5 +1,4 @@
 import { Grid, TextField, Button } from "@mui/material";
-import initializeTableData from "../App";
 
 const Board = ({
   rows,
