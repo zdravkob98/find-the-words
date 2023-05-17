@@ -35,3 +35,9 @@
 .textfield-hover .MuiInputLabel-root.Mui-focused {
   color: var(--color-accent) !important;
 }
+
+/* List */
+.list-component {
+  margin-bottom: 100px;
+  width: 70%;
+}

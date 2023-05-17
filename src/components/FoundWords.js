@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Divider, List, ListItem, ListItemText } from "@mui/material";
 import { words } from "../components/Words";
+import "../App.css";
 
 const FoundWords = ({ rows, columns, tableData }) => {
   const dfs = (table, visited, row, col, word, currentWord, found) => {
@@ -67,7 +68,7 @@ const FoundWords = ({ rows, columns, tableData }) => {
           <h2>{`Found ${count} words`}</h2>
         </Grid>
 
-        <List sx={{ marginBottom: "100px", width: "70%" }}>
+        <List className="list-component">
           {Object.entries(foundWords).map(([key, value]) => (
             <React.Fragment key={key}>
               {value.length !== 0 && (
