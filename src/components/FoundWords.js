@@ -1,5 +1,12 @@
 import React from "react";
-import { Grid, Divider, List, ListItem, ListItemText } from "@mui/material";
+import {
+  Grid,
+  Divider,
+  List,
+  ListItem,
+  ListItemText,
+  Box,
+} from "@mui/material";
 import { words } from "../components/Words";
 import "../App.css";
 
@@ -66,32 +73,42 @@ export const iterateTable = (rows, cols, tableData) => {
         <h2>{`Time taken: ${timeTaken.toFixed(2)} milliseconds`}</h2>
         <h2>{`Found ${count} words`}</h2>
       </Grid>
-
-      <List className="list-component">
-        {Object.entries(foundWords).map(([key, value]) => (
-          <React.Fragment key={key}>
-            {value.length !== 0 && (
-              <>
-                <ListItem disablePadding>
-                  <Grid
-                    item
-                    container
-                    xs={12}
-                    display="flex"
-                    flexDirection="column"
-                  >
-                    <h4>{`Words with ${key.slice(5)} letters:`}</h4>
-                    <ListItemText primary={value.join(", ")} />
-                  </Grid>
-                </ListItem>
-                <Grid>
-                  <Divider variant="fullWidth" />
-                </Grid>
-              </>
-            )}
-          </React.Fragment>
-        ))}
-      </List>
+      <Box
+        boxShadow={5}
+        borderRadius={16}
+        bgcolor="white"
+        p={3}
+        marginBottom={2}
+        width="80%"
+      >
+        <List className="list-component">
+          {Object.entries(foundWords)
+            .sort((a, b) => a[0].slice(5) - b[0].slice(5))
+            .map(([key, value]) => (
+              <React.Fragment key={key}>
+                {value.length !== 0 && (
+                  <>
+                    <ListItem disablePadding>
+                      <Grid
+                        item
+                        container
+                        xs={12}
+                        display="flex"
+                        flexDirection="column"
+                      >
+                        <h4>{`Words with ${key.slice(5)} letters:`}</h4>
+                        <ListItemText primary={value.join(", ")} />
+                      </Grid>
+                    </ListItem>
+                    <Grid>
+                      <Divider variant="fullWidth" />
+                    </Grid>
+                  </>
+                )}
+              </React.Fragment>
+            ))}
+        </List>
+      </Box>
     </Grid>
   );
 };
