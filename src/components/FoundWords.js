@@ -49,6 +49,10 @@ const FoundWords = ({ rows, columns, tableData }) => {
     }
     const endTime = performance.now();
     const timeTaken = endTime - startTime;
+    const count = Object.values(foundWords).reduce(
+      (accumulator, currentValue) => accumulator + currentValue.length,
+      0
+    );
 
     return (
       <Grid container justifyContent="center" marginTop={10}>
@@ -60,7 +64,7 @@ const FoundWords = ({ rows, columns, tableData }) => {
           alignItems="center"
         >
           <h2>{`Time taken: ${timeTaken.toFixed(2)} milliseconds`}</h2>
-          <h2>{`Found ${foundWords.length} words`}</h2>
+          <h2>{`Found ${count} words`}</h2>
         </Grid>
 
         <List sx={{ marginBottom: "100px", width: "70%" }}>
