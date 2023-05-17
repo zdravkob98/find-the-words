@@ -18,11 +18,13 @@
 .orange-button {
   background-color: var(--color-accent) !important;
   color: white !important;
+  margin-bottom: 100px !important;
 }
 
 .orange-button:disabled {
   background-color: gray !important;
   color: #ccc !important;
+  margin-bottom: 100px;
 }
 
 /* TextField */
@@ -34,4 +36,9 @@
 
 .textfield-hover .MuiInputLabel-root.Mui-focused {
   color: var(--color-accent) !important;
+}
+
+/* List */
+.list-component {
+  margin-bottom: 100px;
 }

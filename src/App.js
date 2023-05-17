@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import BoardSize from "./components/BoardSize";
 import EmptyBoard from "./components/EmptyBoard";
 import PreviewBoard from "./components/PreviewBoard";
-import FoundWords from "./components/FoundWords";
+import { iterateTable } from "./components/FoundWords";
 
 function App() {
   const [rows, setRows] = useState(2);
@@ -38,8 +38,7 @@ function App() {
       {showPreviewTable && (
         <>
           <PreviewBoard tableData={tableData} />
-
-          <FoundWords rows={rows} columns={columns} tableData={tableData} />
+          {iterateTable(rows, columns, tableData)}
         </>
       )}
     </>
